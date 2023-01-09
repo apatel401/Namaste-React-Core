@@ -1,21 +1,25 @@
-const Heading = React.createElement(
+import React, {createElement} from "react";
+import  ReactDOM  from "react-dom/client";
+
+
+const Heading = createElement(
 "h1",
 {
     id: "title",
     className: "main-heading"
 },
-"Chepter 1"
+"Chepter 2"
 )
-const subHeading = React.createElement(
+const subHeading = createElement(
     "h2",
     {
         id: "sub-heading",
         className: "sub-heading"
     },
-"Inception"
+"Igniting app with beast Parcel"
 )
 
-const mainContainer = React.createElement(
+const mainContainer = createElement(
     "div",
     {
         id: "main-container"

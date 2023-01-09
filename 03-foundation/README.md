@@ -1,4 +1,4 @@
-# Ignite Our App - Chapter 2 - Theory
+#laying the foundation - Chapter 3 - Theory
 
 **1. What is `JSX`?**
 ```

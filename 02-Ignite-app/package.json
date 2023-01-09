@@ -1,0 +1,16 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "assignment 2 practical",
+  "main": "app.js",
+  "scripts": {
+    "test": "npx parcel index.html"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "core"
+  ],
+  "author": "aPatel",
+  "license": "ISC"
+}

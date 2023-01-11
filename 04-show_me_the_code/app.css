@@ -2,7 +2,9 @@ li::marker {
     font-size: 28px;
     color: darkblue;
 }
-
+svg{
+    color: #207254;
+}
 li>p {
     font-size: 28px;
     color: darkblue;
@@ -14,7 +16,7 @@ li>p {
     left: 0;
     right: 0;
     display: flex;
-    background-color: #eee;
+    background-color: #fff;
     height: 50px;
     box-shadow: 0px 1px 10px #999;
 }
@@ -26,6 +28,7 @@ li>p {
     max-width: 86%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header img {
@@ -44,7 +47,10 @@ li>p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    color: #fff;
+    background-color: #207254;;
+    padding: 30px;
 }
 
 .search button {
@@ -55,14 +61,21 @@ li>p {
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: none;
+    border: 0px solid #48c479;
     border-radius: 0 20px 20px 0;
+    padding: 5px 10px;
+    border-left: 0px !important;
 }
 
 .search input[type=text] {
-    border: 0px;
-    padding-left: 10px;
+    border: 0px solid #48c479;
     border-radius: 20px 0 0 20px;
+    padding-left: 10px;
+    border-right: 0px !important;
+}
+.search input:focus {
+    border: 1px solid #48c479 !important;
+    border-right: 0px !important;
 }
 
 form {
@@ -74,4 +87,40 @@ form {
     display: flex;
     align-items: center;
     font-size: 2rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2, h3, h4, h5, h6, p{
+    margin-bottom: 0.8rem;
+}
+
+ul.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+.nav-list li{
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.card{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

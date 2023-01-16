@@ -13,8 +13,9 @@ function Body() {
 
 
   return (
-    <div style={{ marginTop: "50px" }}>
-      <div className="search">
+    <>
+      <div className="search-hero">
+      <div className="search custom-row">
         <h2>Great restaurants in your city, delivering to you</h2>
         <p>Set exact location to find the right restaurants near you.</p>
         <div className="form">
@@ -23,9 +24,10 @@ function Body() {
             const filteredData = filterData(searchText, restaurantData);
             setRestaurantData(filteredData)
           }}>
-            <BiSearchAlt />
+           Find Food
           </button>
         </div>
+      </div>
       </div>
       <div className="restaurant-list">
         {restaurantData.map((restaurant) => {
@@ -34,7 +36,7 @@ function Body() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 

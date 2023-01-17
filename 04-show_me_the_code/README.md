@@ -1,4 +1,4 @@
-#Talk is cheap - show me the code - Chapter 4 - Theory
+# Talk is cheap - show me the code - Chapter 4 - Theory
 
 
 **1. Is JSX mandatory for React??**

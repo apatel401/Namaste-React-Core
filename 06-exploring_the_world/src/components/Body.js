@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { RData } from "../config";
 import { BiSearchAlt } from "react-icons/bi";
+import CardShimmer from "./CardShimmer";
 
 const filterData = (searchText, restaurantData) => {
  const filtered = restaurantData.filter((restaurant) => restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
@@ -29,6 +30,10 @@ function Body() {
 if(!restaurantData) return;
   
   return (
+   
+    restaurantData?.length === 0 ? (
+      <CardShimmer />
+    ) : (
     <>
       <div className="search-hero">
       <div className="search custom-row">
@@ -53,7 +58,7 @@ if(!restaurantData) return;
         })}
       </div>
     </>
-  );
+  ));
 }
 
 export default Body;

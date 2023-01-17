@@ -29,16 +29,6 @@ button:hover {
     cursor: pointer;
 }
 
-/* .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    background-color: #fff;
-    height: 50px;
-    box-shadow: 0px 1px 10px #999;
-} */
 
 .header-inner {
     display: flex;
@@ -219,6 +209,10 @@ p {
 
 .nav-item a:hover {
     color: #F40076;
+}
+.nav-item:last-of-type:hover {
+    color: #F40076;
+    cursor: pointer;
 }
 
 .custom-row {

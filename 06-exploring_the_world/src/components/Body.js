@@ -51,11 +51,14 @@ if(!restaurantData) return;
       </div>
       </div>
       <div className="restaurant-list">
-        {filterRestaurantData.map((restaurant) => {
+      {filterRestaurantData.length === 0 ? 
+      <h2>No restaurant Found. Try different name</h2> : 
+      (filterRestaurantData.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
           );
-        })}
+        }))
+        }
       </div>
     </>
   ));

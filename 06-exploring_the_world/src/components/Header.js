@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {logo} from '../../assets/ap-logo-1.png'
-
+import { BiFoodMenu, BiCart } from 'react-icons/bi';
+import {FaRegUser} from 'react-icons/fa'
 const Header = () => {
     return (
         <header className="header">
@@ -10,17 +11,17 @@ const Header = () => {
             </div>
             <nav className="nav-bar custom-row">
                 <ul className="nav-list">
-                    <li>
-                        <Link className="nav-item" to="/">Home</Link>
+                    <li className="nav-item">
+                        <Link to="/">Home</Link>
                     </li>
-                    <li>
-                        <Link className="nav-item" to="/menu">Menu</Link>
+                    <li  className="nav-item">
+                        <Link to="/menu"><BiFoodMenu />Menu</Link>
                     </li>
-                    <li>
-                        <Link className="nav-item" to="/cart">Cart</Link>
+                    <li className="nav-item">
+                        <Link to="/cart"><BiCart /> Cart</Link>
                     </li>
-                    <li>
-                        <Link className="nav-item" to="/account">Account</Link>
+                    <li className="nav-item">
+                        <Link to="/account"><FaRegUser /> Account</Link>
                     </li>
                 </ul>
             </nav>

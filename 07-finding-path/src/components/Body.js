@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { RData } from "../config";
 import { BiSearchAlt } from "react-icons/bi";
+import CardShimmer from "./CardShimmer";
 
 const filterData = (searchText, restaurantData) => {
  const filtered = restaurantData.filter((restaurant) => restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
@@ -12,7 +13,7 @@ function Body() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [filterRestaurantData, setFilterRestaurantData] = useState([]);
   const [searchText, setSearchText] = useState("");
-// console.log(useState())
+
   useEffect(() => {
     getRestaurants();
   }, []);
@@ -29,6 +30,10 @@ function Body() {
 if(!restaurantData) return;
   
   return (
+   
+    restaurantData?.length === 0 ? (
+      <CardShimmer />
+    ) : (
     <>
       <div className="search-hero">
       <div className="search custom-row">
@@ -46,14 +51,17 @@ if(!restaurantData) return;
       </div>
       </div>
       <div className="restaurant-list">
-        {filterRestaurantData.map((restaurant) => {
+      {filterRestaurantData.length === 0 ? 
+      <h2>No restaurant Found. Try different name</h2> : 
+      (filterRestaurantData.map((restaurant) => {
           return (
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
           );
-        })}
+        }))
+        }
       </div>
     </>
-  );
+  ));
 }
 
 export default Body;

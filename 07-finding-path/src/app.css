@@ -8,37 +8,27 @@
 --color-1: #F40076 winter sky pinkish
 
 */
-body{
+body {
     font-family: 'Urbanist', sans-serif;
     font-size: 12px;
 }
+
 li::marker {
     font-size: 28px;
     color: darkblue;
 }
 
-svg {
-    color: #207254;
-}
+
 
 li>p {
     font-size: 28px;
     color: darkblue;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
-/* .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    background-color: #fff;
-    height: 50px;
-    box-shadow: 0px 1px 10px #999;
-} */
+
 
 .header-inner {
     display: flex;
@@ -69,6 +59,7 @@ button:hover{
     align-items: flex-end;
     color: #fff;
     padding: 30px 0 30px 30px;
+    height: 180px;
 }
 
 .search-hero {
@@ -149,14 +140,17 @@ p {
     padding: 10px;
     margin: 10px;
 }
-.card h2{
+
+.card h2 {
     font-size: 17px;
     font-weight: bold;
 }
-.card h3{
+
+.card h3 {
     font-size: 13px;
     font-weight: 400;
 }
+
 .card>img {
     width: 100%;
 }
@@ -187,12 +181,25 @@ p {
     padding: 0;
     display: flex;
 }
-.nav-list li{
+
+.nav-list li {
     margin-left: 1.5rem;
     height: 60px;
     display: flex;
     align-items: center;
 }
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    text-decoration: none;
+    color: black;
+}
+.nav-list li a svg{
+    margin-right: 5px;
+}
+
 .nav-item {
     text-decoration: none;
     color: #333;
@@ -200,11 +207,53 @@ p {
     font-weight: bold;
 }
 
-.nav-item:hover {
+.nav-item a:hover {
     color: #F40076;
+}
+.nav-item:last-of-type:hover {
+    color: #F40076;
+    cursor: pointer;
 }
 
 .custom-row {
     width: 86%;
     margin: 0 auto;
+}
+
+.shimmer-card {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.shimmer-img {
+    width: 100%;
+    height: 115px;
+    margin-bottom: 0.8rem;
+    background-color: rgb(210, 210, 210);
+}
+
+.shimmer-title {
+    height: 34px;
+    margin-bottom: 0.8rem;
+    background-color: rgb(210, 210, 210);
+}
+
+.shimmer-tag {
+    height: 26px;
+    margin-bottom: 0.8rem;
+    background-color: rgb(210, 210, 210);
+}
+
+.shimmer-dist {
+    height: 12px;
+    margin-bottom: 0.8rem;
+    background-color: rgb(210, 210, 210);
+}
+
+.search-hero-shimmer {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(210, 210, 210);
 }

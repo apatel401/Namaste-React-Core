@@ -12,7 +12,7 @@ function Body() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [filterRestaurantData, setFilterRestaurantData] = useState([]);
   const [searchText, setSearchText] = useState("");
-
+// console.log(useState())
   useEffect(() => {
     getRestaurants();
   }, []);

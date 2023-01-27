@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Formik } from "formik";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
-const Login = ({loggedIn, setLoggedIn}) => {
+const Login = () => {
+  const [loggedIn, setLoggedIn] = useOutletContext();
   const navigate = useNavigate();
   return (
     <Formik

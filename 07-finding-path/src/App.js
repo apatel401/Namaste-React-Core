@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./components/Login";
 import "./app.css";
@@ -22,7 +22,7 @@ function AppLayout() {
   return (
     <div>
       <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
-      <Outlet />
+      <Outlet context={[ loggedIn, setLoggedIn ]} />
       <Footer />
     </div>
   );
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login  />,
+        element: <Login />,
       }
     ],
   }
@@ -65,3 +65,4 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+ 

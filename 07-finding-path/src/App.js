@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
-// import AppLayout from "./components/AppLayout";
+import Login from "./components/Login";
 import "./app.css";
 import {
   BrowserRouter,
@@ -18,9 +18,10 @@ import Menu from "./components/Menu"
 import RestaurantMenu from "./components/RestaurantMenu";
 
 function AppLayout() {
+  const [loggedIn, setLoggedIn] = useState(false)
   return (
     <div>
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Outlet />
       <Footer />
     </div>
@@ -49,12 +50,12 @@ const router = createBrowserRouter([
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
+      {
+        path: "/login",
+        element: <Login  />,
+      }
     ],
-  },
-  {
-    path: "about",
-    element: <div>About</div>,
-  },
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

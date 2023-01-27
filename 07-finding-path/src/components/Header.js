@@ -4,7 +4,6 @@ import {logo} from '../../assets/ap-logo-1.png'
 import { BiFoodMenu, BiCart, BiAccessibility, BiNotepad } from 'react-icons/bi';
 import {FaRegUser} from 'react-icons/fa'
 const Header = () => {
-    const [loggedIn, setLoggedIn] = useState(false)
     return (
         <header className="header">
             <div>
@@ -27,7 +26,7 @@ const Header = () => {
                     {loggedIn ? (<li className="nav-item">
                         <Link to="/account"><FaRegUser /> Account</Link>
                     </li>) : null}
-                    <li className="nav-item" onClick={() => setLoggedIn(!loggedIn)}>
+                    <li className="nav-item">
                         {loggedIn ? "Logout" : "Login"}
                     </li>
                 </ul>

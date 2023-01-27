@@ -13,6 +13,17 @@ body {
     font-size: 12px;
 }
 
+ul, ol { 
+    display: block;
+    list-style: disc outside none;
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+ol { 
+    list-style-type: decimal;
+}
+
+/* 
 li::marker {
     font-size: 28px;
     color: darkblue;
@@ -23,7 +34,7 @@ li::marker {
 li>p {
     font-size: 28px;
     color: darkblue;
-}
+} */
 
 button:hover {
     cursor: pointer;
@@ -256,4 +267,83 @@ p {
     width: 100%;
     height: 200px;
     background-color: rgb(210, 210, 210);
+}
+
+/* Menu */
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.rest-menu-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3%;
+    align-items: center;
+    background-color: #002A32;
+    color: #fff;
+
+}
+.rest-menu-img {
+    width: 250px;
+    height: auto;
+}
+.rest-menu-img img{
+width: 100%;
+max-width: 100%;
+}
+.rest-menu-main{
+padding: 1rem 2rem;
+}
+.menu ul{
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+}
+.menu h1{
+    text-align: center;
+}
+.restaurant-list a{
+    text-decoration: none;
+    color: black;
+}
+form.formik-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px auto;
+    align-items: center;
+    height: 70vh;
+    justify-content: center;
+    background-color: #002A32;
+    color: #fff;
+}
+
+.formik-form
+    input {
+        width: 300px;
+        display: flex;
+        height: 34px;
+        border-radius: 20px;
+        border: 2px solid #002A32;
+        padding-left: 0.75rem;
+}
+.form-label{
+    margin-bottom: 20px;
+}
+.form-label label {
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 0.75rem;
+}
+.formik-form button{
+background-color: #FF2096;
+font-size: 18px;
+font-weight: 600;
+border: none;
+padding: 1rem 2rem;
+border-radius: 1rem;
 }

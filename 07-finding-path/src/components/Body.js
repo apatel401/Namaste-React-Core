@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import { RData } from "../config";
 import { BiSearchAlt } from "react-icons/bi";
 import CardShimmer from "./CardShimmer";
+import { Link } from "react-router-dom";
 
 const filterData = (searchText, restaurantData) => {
  const filtered = restaurantData.filter((restaurant) => restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase()));
@@ -55,7 +56,9 @@ if(!restaurantData) return;
       <h2>No restaurant Found. Try different name</h2> : 
       (filterRestaurantData.map((restaurant) => {
           return (
+            <Link to={`/restaurant/${restaurant.data.id}`}>
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
+            </Link>
           );
         }))
         }

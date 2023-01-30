@@ -16,6 +16,7 @@ import ErrorHandling from "./components/ErrorHandling";
 import About from "./components/About"
 import Menu from "./components/Menu"
 import RestaurantMenu from "./components/RestaurantMenu";
+import Profile from './components/Profile'
 
 function AppLayout() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       }
     ],
   }
@@ -61,8 +66,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
+
     <RouterProvider router={router} />
-  </React.StrictMode>
+
 );
  

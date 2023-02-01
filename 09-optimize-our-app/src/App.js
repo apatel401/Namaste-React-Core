@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { lazy, Suspense, useState} from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./components/Login";
 import "./app.css";
@@ -17,6 +17,8 @@ import About from "./components/About"
 import Menu from "./components/Menu"
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from './components/Profile'
+import CardShimmer from "./components/CardShimmer";
+const Instamart = lazy(() => import("./components/Instamart") )
 
 function AppLayout() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -58,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+      },
+      {
+        path: "/instamart",
+        element: <Instamart />,
       }
     ],
   }

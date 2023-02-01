@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Formik } from "formik";
 import { useNavigate, useOutletContext } from "react-router-dom";
 
@@ -22,6 +22,8 @@ const Login = () => {
       onSubmit={(values, { setSubmitting }) => {
 setLoggedIn(true)
         navigate('/');
+       localStorage.setItem("username", JSON.stringify(values.email))
+       localStorage.setItem("password",  JSON.stringify(values.password))
         // setTimeout(() => {
         //   alert(JSON.stringify(values, null, 2));
         //   setSubmitting(false);

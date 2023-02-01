@@ -5,13 +5,14 @@ import { BiSearchAlt } from "react-icons/bi";
 import CardShimmer from "./CardShimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 
 function Body() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [filterRestaurantData, setFilterRestaurantData] = useState([]);
   const [searchText, setSearchText] = useState("");
-
+const isOnline = useOnline();
   useEffect(() => {
     getRestaurants();
   }, []);
@@ -23,6 +24,10 @@ function Body() {
     const json = await data.json();
     setRestaurantData(json?.data?.cards[2]?.data?.data?.cards);
     setFilterRestaurantData(json?.data?.cards[2]?.data?.data?.cards);
+  }
+
+  if(!isOnline) {
+    return <h1>offline, Please check your Internet connection</h1>
   }
 //early return
 if(!restaurantData) return;

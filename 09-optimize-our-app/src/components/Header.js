@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useOutletContext } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import {logo} from '../../assets/ap-logo-1.png'
-import { BiFoodMenu, BiCart, BiAccessibility, BiNotepad } from 'react-icons/bi';
+import { BiFoodMenu, BiCart, BiNotepad, BiCaretDown} from 'react-icons/bi';
 import {FaRegUser} from 'react-icons/fa'
+import useLocalStorage from '../utils/useLocalStorage';
 const Header = ({loggedIn, setLoggedIn}) => {
+    const user = useLocalStorage();
     return (
         <header className="header">
             <div>
@@ -24,7 +26,7 @@ const Header = ({loggedIn, setLoggedIn}) => {
                         <Link to="/cart"><BiCart /> Cart</Link>
                     </li>
                     {loggedIn ? (<li className="nav-item">
-                        <Link to="/account"><FaRegUser /> Account</Link>
+                        <Link to="/account"><FaRegUser />{user}<BiCaretDown /> </Link>
                     </li>) : null}
                     {loggedIn ? (<li className="nav-item" onClick={() => setLoggedIn(false)}>
                     Logout

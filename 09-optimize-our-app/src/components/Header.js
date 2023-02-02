@@ -5,7 +5,7 @@ import { BiFoodMenu, BiCart, BiNotepad, BiCaretDown} from 'react-icons/bi';
 import {FaRegUser} from 'react-icons/fa'
 import useLocalStorage from '../utils/useLocalStorage';
 const Header = ({loggedIn, setLoggedIn}) => {
-    const user = useLocalStorage();
+    // const user = useLocalStorage();
     return (
         <header className="header">
             <div>
@@ -26,7 +26,7 @@ const Header = ({loggedIn, setLoggedIn}) => {
                         <Link to="/cart"><BiCart /> Cart</Link>
                     </li>
                     {loggedIn ? (<li className="nav-item">
-                        <Link to="/account"><FaRegUser />{user}<BiCaretDown /> </Link>
+                        <Link to="/account"><FaRegUser /><BiCaretDown /> </Link>
                     </li>) : null}
                     {loggedIn ? (<li className="nav-item" onClick={() => setLoggedIn(false)}>
                     Logout

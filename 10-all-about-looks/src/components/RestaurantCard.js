@@ -10,11 +10,11 @@ function RestaurantCard({
 
 
   return (
-    <div className="card">
+    <div className="w-52 m-2.5 p-2.5">
       <img src={IMG_CDN_URL + cloudinaryImageId} />
-      <h2>{name}</h2>
-      <h3>{cuisines.join(", ")}</h3>
-      <h4>{lastMileTravelString} minutes</h4>
+      <h2 className='font-semibold text-md'>{name}</h2>
+      <h3 className='font-normal text-sm mb-2'>{cuisines.join(", ")}</h3>
+      <h4 className='font-semibold text-xs text-pinky'>{lastMileTravelString} minutes</h4>
     </div>
   )
 }

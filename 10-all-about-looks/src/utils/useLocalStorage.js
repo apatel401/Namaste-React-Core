@@ -5,7 +5,7 @@ function useLocalStorage() {
 
     useEffect(() => {
      const username = localStorage.getItem("username");
-    setUser(username.split("@")[0])
+    username && setUser(username.split("@")[0])
     // setting up loggedin when user is already logged in before
     }, [])
     

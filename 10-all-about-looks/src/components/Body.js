@@ -38,27 +38,27 @@ if(!restaurantData) return;
       <CardShimmer />
     ) : (
     <>
-      <div className="search-hero">
-      <div className="search custom-row">
-        <h2>Great restaurants in your city, delivering to you</h2>
-        <p>Set exact location to find the right restaurants near you.</p>
-        <div className="form">
-          <input type="text" placeholder="Search.." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-          <button onClick={(e) => {
+      <div className="bg-phew text-white">
+      <div className="w-5/6 my-0 mx-auto h-44 flex flex-col justify-center items-end py-8 pr-0 pl-8">
+        <h2 className="text-xl mb-4">Great restaurants in your city, delivering to you</h2>
+        <p className="text-sm mb-4">Set exact location to find the right restaurants near you.</p>
+        <div className="flex" style={{ height: "40px"}}>
+          <input className="rounded-l-md pl-2 focus:outline-none" type="text" placeholder="Search.." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+          <button className="rounded-r-md bg-pinky p-2 flex justify-center text-base" onClick={(e) => {
             const filteredData = filterData(searchText, restaurantData);
             setFilterRestaurantData(filteredData)
-          }}>
+          }} >
            Find Food
           </button>
         </div>
       </div>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap justify-center mt-5">
       {filterRestaurantData.length === 0 ? 
       <h2>No restaurant Found. Try different name</h2> : 
       (filterRestaurantData.map((restaurant) => {
           return (
-            <Link to={`/restaurant/${restaurant.data.id}`}>
+            <Link to={`/restaurant/${restaurant.data.id}`} className="hover:cursor-pointer hover:shadow-lg">
             <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
             </Link>
           );

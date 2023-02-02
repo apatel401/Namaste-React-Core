@@ -23,9 +23,6 @@ function RestaurantCard({
       <h4 className='text-xs text-black flex font-normal py-0.5'>{deliveryTime} min</h4>
       <h4 className='text-xs text-black flex font-normal py-0.5'><BiRupee className='h-4 mr-0.5'/> {Math.floor(costForTwo/100)} for two</h4>
       </div>
-
-
-
     </div>
   )
 }

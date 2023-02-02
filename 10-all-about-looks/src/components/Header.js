@@ -11,7 +11,7 @@ const Header = ({ loggedIn, setLoggedIn }) => {
       <div>
         <img src={logo} alt="" />
       </div>
-      <nav className="flex justify-end w-5/6 mx-auto">
+      <nav className="flex justify-end w-5/6 mx-auto my-5">
         <ul className="nav-list list-none flex">
           <li className="flex items-center ml-6 h-16 text-base font-semibold">
             <Link to="/" className=" flex items-center text-black no-underline">

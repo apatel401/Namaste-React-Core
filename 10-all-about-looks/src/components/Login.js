@@ -40,30 +40,32 @@ setLoggedIn(true)
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit} className="formik-form">
-          <div className="form-label">
-            <label>Email</label>
+        <form onSubmit={handleSubmit} className="formik-form flex flex-col w-full my-0 mx-auto items-center h-[70vh] justify-center bg-phew text-white">
+          <div className="form-label mb-4">
+            <label className="text-lg font-semibold pr-2">Email</label>
             <input
               type="email"
               name="email"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
+              className="w-72 flex h-9 rounded-br-2xl rounded-tl-2xl border-5 border-phew border-solid pl-3"
             />
             {errors.email && touched.email && errors.email}
           </div>
           <div className="form-label">
-            <label>password</label>
+            <label className="text-lg font-semibold pr-2">password</label>
             <input
               type="password"
               name="password"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.password}
+              className="w-72 flex h-9 rounded-br-2xl rounded-tl-2xl border-5 border-phew border-solid pl-3"
             />
             {errors.password && touched.password && errors.password}
           </div>
-          <button type="submit" disabled={isSubmitting}>
+          <button type="submit" className="bg-pinky text-lg font-semibold border-0 rounded-2xl py-2 px-6 mt-6" disabled={isSubmitting}>
             Submit
           </button>
         </form>
